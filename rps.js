@@ -1,12 +1,12 @@
 function rockPaperScissors(player1, player2) {
 
-  winConditions = {
+  const winConditions = {
     rock: ['scissors','lizard'],
     paper: ['rock', 'spock'],
     scissors: ['paper', 'lizard'],
     lizard: ['spock', 'paper'],
     spock: ['scissors', 'rock']
-  }
+  };
 
   if (player1===player2) {
     return 'draw'

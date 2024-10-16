@@ -1,7 +1,7 @@
 function rockPaperScissors(player1, player2) {
   if (player1===player2) {
     return 'draw'
-  } else if ((player1 === 'paper' && player2 === 'rock') || (player1 === 'scissors' && player2 == 'paper') || (player1 === 'rock' && player2 === 'scissors')) {
+  } else if ((player1 === 'rock' && player2 === 'scissors') || (player1 === 'rock' && player2 == 'lizard') || (player1 === 'paper' && player2 === 'rock') || (player1 === 'paper' && player2 === 'spock') || (player1 === 'scissors' && player2 === 'paper') || (player1 === 'scissors' && player2 === 'lizard') || (player1 === 'lizard' && player2 === 'spock') || (player1 === 'lizard' && player2 === 'paper') || (player1 === 'spock' && player2 === 'scissors') || (player1 === 'spock' && player2 === 'rock')) {
     return 'player1'
   } else if ((player1 === 'paper' && player2 === 'scissors') || (player1 === 'scissors' && player2 == 'rock') || (player1 === 'rock' && player2 === 'paper')) {
     return 'player2'
@@ -11,8 +11,9 @@ function rockPaperScissors(player1, player2) {
 
 // Testing
 
-// Player 1 wins: paper-rock, scissors-paper, rock-scissors
-// Player 2 wins: paper-scissors, scissors-rock, rock-paper
+// Player 1 wins: rock-scissors, rock-lizard, paper-rock, paper-spock, scissors-paper, scissors-lizard, lizard-spock, lizard-paper, spock-scissors, spock-rock
+// Player 2 wins: scissors-rock, lizard-rock, rock-paper, spock-paper, paper-scissors, lizard-scissors, spock-lizard, paper-lizard, scissors-spock, rock-spock
+// Draw:          both inputs are the same
 
 // const readline = require('readline-sync')
 // const input1 = readline.question('Player 1: rock, paper, or scissors: ')

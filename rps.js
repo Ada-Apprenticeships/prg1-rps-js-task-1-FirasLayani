@@ -1,6 +1,6 @@
 function rockPaperScissors(player1, player2) {
   
-  // Define conditions of which weapons beat what
+  // Dictionary containing weapons as keys and the weapons it beats as strings in an array
   const winConditions = {
     rock: ['scissors','lizard'],
     paper: ['rock', 'spock'],
@@ -10,10 +10,11 @@ function rockPaperScissors(player1, player2) {
   };
 
   if (player1===player2) {
+    // If player 1 and player 2's choices are the same, it is a draw
     return 'draw';
 
   } else if (winConditions[player1].includes(player2)) {
-    // If player 2's choice is one of the weapons defeated by player 1's choice, player 1 wins
+    // Otherwise if player 1's weapon (as a key in the dictionary/object) has player 2's weapon as a corresponding value, player 1 wins
     return 'player1';
 
   } else {
